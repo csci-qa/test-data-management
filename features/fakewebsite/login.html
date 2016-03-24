@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+</head>
+<body>
+
+
+
+    <form name="loginForm" onsubmit="submitLogin();">
+
+        <input type ="text" name="user">
+
+        <input type ="password" name="pass">
+
+        <input type ="button" name="login" onclick="submitLogin(); "value="Login">
+
+    </form>
+
+    <script>
+    function submitLogin(){
+        //alert(document.loginForm.user.value);
+        window.location.assign = ("success.html")
+
+    }
+    </script>
+
+    <script>
+        function submitLogin(){
+            //alert(document.loginForm.user.value);
+            window.location.assign = ("fail.html")
+
+        }
+    </script>
+</body>
+</html>

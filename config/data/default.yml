@@ -1,0 +1,7 @@
+
+validcred:
+  username: ~user_name
+  password: ~password
+
+invalidcred:
+  username: ~user_name
