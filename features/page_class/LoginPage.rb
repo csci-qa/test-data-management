@@ -15,12 +15,16 @@ class LoginPage
 
 
 
+
   def login_with_valid_credentials
     populate_page_with data_for :validcred
+    self.login
   end
 
   def login_with_invalid_credentials
+
     populate_page_with data_for :invalidcred
+    self.login
   end
 
 end

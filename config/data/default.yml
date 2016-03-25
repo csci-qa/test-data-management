@@ -1,7 +1,8 @@
 
 validcred:
   username: ~user_name
-  password: ~password
+  password: 1234
 
 invalidcred:
   username: ~user_name
+

@@ -9,7 +9,7 @@
 
 
 
-    <form name="loginForm" onsubmit="submitLogin();">
+    <form name="loginForm" >
 
         <input type ="text" name="user">
 
@@ -20,19 +20,35 @@
     </form>
 
     <script>
-    function submitLogin(){
-        //alert(document.loginForm.user.value);
-        window.location.assign = ("success.html")
-
-    }
-    </script>
-
-    <script>
         function submitLogin(){
             //alert(document.loginForm.user.value);
-            window.location.assign = ("fail.html")
+           //function validateForm() {
+           // var x = document.forms["loginForm"]["pass"].value;
+           // if (x == null || x == "") {
+           //     alert("Name must be filled out");
+           //     return false;
 
-        }
+
+           //
+
+            // if password incorrec go to fail
+            var x = document.forms["loginForm"]["pass"].value;
+
+            if ((x == null || x == "")) {
+
+                window.location.assign("Fail.html")
+            //else success
+            }
+            else {
+                window.location.assign("Success.html")
+
+            }
+
+
+        };
     </script>
+
+
+
 </body>
 </html>

@@ -3,9 +3,7 @@ require 'page-object'
 class FailPage
   include PageObject
 
-  def message
-
-  end
+  div(:message, id:'message' )
 
 end
 
