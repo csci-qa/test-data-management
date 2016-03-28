@@ -1,0 +1,6 @@
+valid:
+  username: ~first_name
+  password: password
+
+invalid:
+  username: ~first_name

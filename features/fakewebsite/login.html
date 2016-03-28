@@ -13,7 +13,13 @@
 
 <script>
     function submitLogin() {
-        window.location.assign("success.html");
+        var x = document.forms["loginForm"]["pass"].value;
+        if (x == null || x == "") {
+            window.location.assign("failure.html")
+        }
+        else {
+            window.location.assign("success.html")
+        }
     };
 </script>
 </body>
