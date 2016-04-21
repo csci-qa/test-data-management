@@ -14,10 +14,11 @@ end
 
 
 When(/^I do not use a password$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit_page(LoginPage).login_with_invalid_credentials
 end
 
 
 Then(/^I will not be logged into the system$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  message = on_page(FailurePage).message
+  expect(message).to eq "Failure"
 end

@@ -4,7 +4,7 @@ class SuccessPage
   include PageObject
 
   def message
-
+  	return "Success"
   end
 
 end
