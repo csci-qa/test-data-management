@@ -4,7 +4,7 @@ class FailurePage
   include PageObject
 
   def message
-  	return "Failure"
+  	return @broswer.text
   end
 
 end

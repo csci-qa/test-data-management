@@ -9,7 +9,7 @@ end
 
 Then(/^I will be logged into the system$/) do
   message = on_page(SuccessPage).message
-  expect(message).to eq "Success"
+  expect(message).to include "Success"
 end
 
 
@@ -20,5 +20,5 @@ end
 
 Then(/^I will not be logged into the system$/) do
   message = on_page(FailurePage).message
-  expect(message).to eq "Failure"
+  expect(message).to include "failure"
 end
