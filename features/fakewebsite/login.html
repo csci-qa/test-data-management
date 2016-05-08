@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
 </head>
 <body>
 
-    <form name="loginForm" >
+    <form name="loginForm">
         <input type="text" name="user">
         <input type="password" name="pass">
         <input type="button" name="login" onclick="submitLogin();" value="Login">
@@ -14,7 +14,12 @@
 
     <script>
         function submitLogin() {
-            window.location.assign("success.html");
+            var password = document.forms[0][1].value
+            console.log(password)
+            if (password != null && password != "")
+                window.location.assign("success.html")
+            else 
+                window.location.assign("failure.html")
         };
     </script>
 
