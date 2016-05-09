@@ -15,9 +15,12 @@ end
 
 When(/^I do not use a password$/) do
   pending # Write code here that turns the phrase above into concrete actions
+  teller = Teller.new
+	teller.withdraw_from(@my_account, amount)
 end
 
 
 Then(/^I will not be logged into the system$/) do
   pending # Write code here that turns the phrase above into concrete actions
+  cash_slot.contents.should == amount
 end
