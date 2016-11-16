@@ -1,0 +1,6 @@
+valid_credentials:
+  username: "Bob"
+  password: "password"
+
+no_password:
+  username: "Jenna"
