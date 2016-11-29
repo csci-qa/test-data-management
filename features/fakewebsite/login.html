@@ -14,8 +14,13 @@
 
     <script>
         function submitLogin() {
-            window.location.assign("success.html");
-        };
+            if(!document.getElementsByName("pass")[0].value)
+                window.location.assign("failure.html");
+            else
+            {
+                window.location.assign("success.html");
+            }
+        }
     </script>
 
 </body>
