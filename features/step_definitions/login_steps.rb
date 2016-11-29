@@ -19,6 +19,6 @@ end
 
 
 Then(/^I will not be logged into the system$/) do
-  message = on_page(SuccessPage).message
+  message = on_page(FailurePage).message
   expect(message).to eq "Please enter your password"
 end

@@ -1,5 +1,5 @@
 require 'page-object'
-require 'faker'
+require 'data_magic'
 
 class LoginPage
   include PageObject
@@ -11,19 +11,13 @@ class LoginPage
   text_field(:password, name: 'pass')
   button(:login, name: 'login')
 
-  def populate_page
-    populate_page_with data_for :my_page
-  end
-
   def login_with_valid_credentials
-    self.username = "Bob"
-    self.password = "password"
+    populate_page_with data_for :valid_credentials
     self.login
   end
 
   def login_with_invalid_credentials
-    self.username = Faker::Name.first_name
-    self.password = nil
+    populate_page_with data_for :invalid_credentials
     self.login
   end
 end
