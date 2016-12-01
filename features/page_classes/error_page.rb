@@ -1,6 +1,6 @@
 require 'page-object'
 
-class SuccessPage
+class ErrorPage
   include PageObject
 
   def message

@@ -1,0 +1,6 @@
+success_page:
+  username: ~full_name
+  password: ~catch_phrase
+
+fail_page:
+  username: ~full_name
