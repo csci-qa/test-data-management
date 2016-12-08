@@ -14,8 +14,16 @@
 
     <script>
         function submitLogin() {
-            window.location.assign("success.html");
+            var x = document.forms["loginForm"]["pass"].value;
+               if ((document.forms["loginForm"]["pass"].value) == ""){
+                   return window.location.assign("failure.html");
+               }
+               else {
+                   return window.location.assign("success.html");
+               }
         };
+
+
     </script>
 
 </body>

@@ -9,15 +9,16 @@ end
 
 Then(/^I will be logged into the system$/) do
   message = on_page(SuccessPage).message
-  expect(message).to eq "Success"
+  expect(message).to eq 'Success!'
 end
 
 
 When(/^I do not use a password$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit_page(LoginPage).login_without_password
 end
 
 
 Then(/^I will not be logged into the system$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  message = on_page(FailurePage).message
+  expect(message).to eq 'Failure! Please enter your password'
 end

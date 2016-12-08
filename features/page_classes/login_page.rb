@@ -1,7 +1,9 @@
 require 'page-object'
+require 'data_magic'
 
 class LoginPage
   include PageObject
+  include DataMagic
 
   page_url "file:///#{Dir.pwd}/features/fakewebsite/login.html"
 
@@ -9,10 +11,18 @@ class LoginPage
   text_field(:password, name: 'pass')
   button(:login, name: 'login')
 
+
+
   def login_with_valid_credentials
-    self.username = "Bob"
-    self.password = "password"
+
+    populate_page_with data_for :valid_credentials
     self.login
   end
+
+  def login_without_password
+    populate_page_with data_for :invalid_no_password
+    self.login
+  end
+
 
 end
