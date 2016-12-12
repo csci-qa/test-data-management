@@ -1,10 +1,12 @@
+#SuccessPage class
+
 require 'page-object'
 
-class SuccessPage
-  include PageObject
+  class SuccessPage
+    include PageObject
 
-  def message
+    def message
+      self.text
+    end
 
   end
-
-end
