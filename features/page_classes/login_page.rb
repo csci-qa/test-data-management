@@ -1,3 +1,5 @@
+#This page details credentials to be entered into the fields
+
 require 'page-object'
 
 class LoginPage
@@ -12,6 +14,12 @@ class LoginPage
   def login_with_valid_credentials
     self.username = "Bob"
     self.password = "password"
+    self.login
+  end
+
+  def login_with_invalid_credentials
+    self.username = "Bob"
+    self.password = ""
     self.login
   end
 
